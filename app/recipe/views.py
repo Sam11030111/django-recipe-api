@@ -39,7 +39,8 @@ class RecipeViewSet(viewsets.ModelViewSet):
         serializer.save(user=self.request.user)
 
 
-# Since it only needs to delete, update and list tags, without needing the other CRUD actions.
+# Since it only needs to delete,
+# update and list tags, without needing the other CRUD actions.
 class TagViewSet(mixins.DestroyModelMixin,
                  mixins.UpdateModelMixin,
                  mixins.ListModelMixin,
