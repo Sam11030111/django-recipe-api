@@ -393,7 +393,8 @@ class PrivateRecipeApiTests(TestCase):
         r3 = create_recipe(user=self.user, title='Recipe 3')
 
         params = {'tags': f'{tag1.id},{tag2.id}'}
-        # Since it's a get request, the "params" will treated as query parameters.
+        # Since it's a get request,
+        # the "params" will treated as query parameters.
         res = self.client.get(RECIPES_URL, params)
 
         s1 = RecipeSerializer(r1)
